@@ -1,0 +1,26 @@
+[
+  {
+    "id": "01",
+    "name": "Foquete básico",
+    "valor": "1000",
+    "image": "./rocket/foquete-basico.jpg"
+  },
+  {
+    "id": "02",
+    "name": "Foquete Prata",
+    "valor": "2000",
+    "image": "./rocket/foquete-prata.jpg"
+  },
+  {
+    "id": "03",
+    "name": "Foquete Ouro",
+    "valor": "5000",
+    "image": "./rocket/foquete-gold.jpg"
+  },
+  {
+    "id": "04",
+    "name": "Foquete diamante",
+    "valor": "10000",
+    "image": "./rocket/foquete-diamante.jpg"
+  }
+]
