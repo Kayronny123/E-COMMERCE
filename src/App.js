@@ -7,7 +7,7 @@ import "./styles.css";
 
 export default function App() {
   const [carrinho, setCarrinho] = useState([]);
-  const [ordenação, setOrdenacao] = useState("Crescente");
+  const [ordenacao, setOrdenacao] = useState("crescente");
   const [valorMax, setValorMax] = useState(0);
   const [valorMin, setValorMin] = useState(0);
   const [nome, setNome] = useState("");
@@ -27,16 +27,18 @@ export default function App() {
   return (
     <AppContainer>
       <Filtro
-        ordenação={ordenação}
+        ordenacao={ordenacao}
         setOrdenacao={setOrdenacao}
-        valorMax={valorMax}
         setValorMax={setValorMax}
-        valorMin={valorMin}
         setValorMin={setValorMin}
-        nome={nome}
         setNome={setNome}
       />
-      <Home carrinho={carrinho} setCarrinho={setCarrinho} />
+      <Home carrinho={carrinho} setCarrinho={setCarrinho} 
+      ordenacao={ordenacao}
+      valorMax={valorMax}
+      valorMin={valorMin}
+      nome={nome}
+      />
       <Carrinho carrinho={carrinho} setCarrinho={setCarrinho} />
     </AppContainer>
   );
