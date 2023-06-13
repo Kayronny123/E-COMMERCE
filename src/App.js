@@ -7,6 +7,10 @@ import "./styles.css";
 
 export default function App() {
   const [carrinho, setCarrinho] = useState([]);
+  const [ordenação, setOrdenacao] = useState("Crescente");
+  const [valorMax, setValorMax] = useState(0);
+  const [valorMin, setValor] = useState(0);
+  const [nome, setNome] = useState("");
 
   useEffect(() => {
     if (carrinho.length > 0) {
