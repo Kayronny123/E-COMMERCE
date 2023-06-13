@@ -12,7 +12,7 @@ export default function App() {
     <AppContainer>
       <Filtro />
       <Home carrinho={carrinho} setCarrinho={setCarrinho} />
-      <Carrinho />
+      <Carrinho carrinho={carrinho} setCarrinho={setCarrinho} />
     </AppContainer>
   );
 }

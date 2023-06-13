@@ -24,8 +24,8 @@ const Home = ({ carrinho, setCarrinho }) => {
       {foquete.map((foquete) => {
         return (
           <FoqueteContainer key={foquete.id}>
-            <Imagem src={foquete.image} alt={foquete.name} />
-            <p>{foquete.name}</p>
+            <Imagem src={foquete.image} alt={foquete.nome} />
+            <p>{foquete.nome}</p>
             <p>Preço: {foquete.valor}</p>
             <button onClick={() => addFoqueteCarrinho(foquete)}>Comprar</button>
           </FoqueteContainer>
