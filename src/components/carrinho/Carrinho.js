@@ -1,3 +1,5 @@
+import { Imagem } from "./style";
+
 const Carrinho = ({ carrinho, setCarrinho }) => {
   const removerCarrinho = (foquete) => {
     const novoCarrinho = carrinho
@@ -18,6 +20,7 @@ const Carrinho = ({ carrinho, setCarrinho }) => {
       {carrinho.map((item) => {
         return (
           <div key={item.id}>
+            <Imagem src={item.image} alt={item.nome} />
             <p>Nome: {item.nome} </p>
             <p>Quantidade: {item.quantidade} </p>
             <button onClick={() => removerCarrinho(item)}>Remover</button>

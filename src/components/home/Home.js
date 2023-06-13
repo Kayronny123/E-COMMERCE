@@ -17,7 +17,6 @@ const Home = ({ carrinho, setCarrinho }) => {
       setCarrinho([...carrinho, { ...foquete, quantidade: 1 }]);
     }
   };
-  console.log(carrinho, "add carrinho");
 
   return (
     <div>
