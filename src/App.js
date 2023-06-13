@@ -9,7 +9,7 @@ export default function App() {
   const [carrinho, setCarrinho] = useState([]);
   const [ordenação, setOrdenacao] = useState("Crescente");
   const [valorMax, setValorMax] = useState(0);
-  const [valorMin, setValor] = useState(0);
+  const [valorMin, setValorMin] = useState(0);
   const [nome, setNome] = useState("");
 
   useEffect(() => {
@@ -26,7 +26,16 @@ export default function App() {
 
   return (
     <AppContainer>
-      <Filtro />
+      <Filtro
+        ordenação={ordenação}
+        setOrdenacao={setOrdenacao}
+        valorMax={valorMax}
+        setValorMax={setValorMax}
+        valorMin={valorMin}
+        setValorMin={setValorMin}
+        nome={nome}
+        setNome={setNome}
+      />
       <Home carrinho={carrinho} setCarrinho={setCarrinho} />
       <Carrinho carrinho={carrinho} setCarrinho={setCarrinho} />
     </AppContainer>
