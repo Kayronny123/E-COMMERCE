@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Carrinho from "./components/carrinho/Carrinho";
 import Filtro from "./components/filtro/Filtro";
 import Home from "./components/home/Home";
@@ -7,6 +7,18 @@ import "./styles.css";
 
 export default function App() {
   const [carrinho, setCarrinho] = useState([]);
+
+  useEffect(() => {
+    if (carrinho.length > 0) {
+      localStorage.setItem("carrinho", JSON.stringify(carrinho));
+    }
+  }, [carrinho]);
+  useEffect(() => {
+    const carrinhoLocalStorage = localStorage.getItem("carrinho");
+    if (carrinhoLocalStorage) {
+      setCarrinho(JSON.parse(carrinhoLocalStorage));
+    }
+  }, []);
 
   return (
     <AppContainer>
